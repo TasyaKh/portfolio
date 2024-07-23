@@ -1,0 +1,26 @@
+@import "./globals";
+@import "grid.css";
+
+body {
+  margin: 0;
+  font-family: var(--font-family-primary), sans-serif;
+  font-size: 13pt;
+  background: var(--body-color);
+  background: linear-gradient(90deg, rgba(22,17,55,1) 0%, rgba(56,30,80,1) 100%);
+  color: var(--text-color-1);
+  font-weight: 300;
+}
+
+h1,h2,h3,h4,h5,h6{
+  padding: var(--p-2) 0;
+  font-weight: bold;
+  //margin: 0;
+  text-transform: uppercase;
+}
+
+hr.thin {
+  border: 0;
+  height: 0.5px;
+  opacity: 0.5;
+  background-image: -webkit-linear-gradient(left, var(--text-color-1) 10%, rgba(0,0,0,0) 60%);
+}
