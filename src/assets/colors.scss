@@ -1,0 +1,93 @@
+:root{
+  //////////////////////////////////////////////////
+  // colors
+  //////////////////////////////////////////////////
+
+  --main-color: #ffbd77;
+
+  --border-color: var(--text-color-1);
+
+  --second-color: rgb(22,17,55);
+
+  //elems colors
+  --body-color: rgb(22,17,55);
+  --text-color-1: rgb(194, 201, 255);
+
+  --bg-selection-color: rgba(148, 140, 255, 0.3);
+  --text-color-hover: #f78cff;
+  --link-color: #b68cff;
+
+
+
+  /* Utility Background Colors */
+  --bg-red-100: #fdecea;
+  --bg-red-200: #fadbd8;
+  --bg-red-300: #f5b7b1;
+  --bg-red-400: #f1948a;
+  --bg-red-500: #ec7063;
+  --bg-red-600: #e74c3c;
+  --bg-red-700: #cb4335;
+  --bg-red-800: #b03a2e;
+  --bg-red-900: #943126;
+
+  --bg-blue-100: #ebf5fb;
+  --bg-blue-200: #d6eaf8;
+  --bg-blue-300: #aed6f1;
+  --bg-blue-400: #85c1e9;
+  --bg-blue-500: #5dade2;
+  --bg-blue-600: #3498db;
+  --bg-blue-700: #2e86c1;
+  --bg-blue-800: #2874a6;
+  --bg-blue-900: #21618c;
+
+  --bg-green-100: #eafaf1;
+  --bg-green-200: #d4efdf;
+  --bg-green-300: #a9dfbf;
+  --bg-green-400: #7dcea0;
+  --bg-green-500: #52be80;
+  --bg-green-600: #27ae60;
+  --bg-green-700: #229954;
+  --bg-green-800: #1e8449;
+  --bg-green-900: #196f3d;
+
+  /* Additional Colors */
+  --bg-yellow-100: #fef9e7;
+  --bg-yellow-200: #fcf3cf;
+  --bg-yellow-300: #f9e79f;
+  --bg-yellow-400: #f7dc6f;
+  --bg-yellow-500: #f4d03f;
+  --bg-yellow-600: #f1c40f;
+  --bg-yellow-700: #d4ac0d;
+  --bg-yellow-800: #b7950b;
+  --bg-yellow-900: #7d6608;
+
+  --bg-gray-100: #f7f9f9;
+  --bg-gray-200: #f0f3f4;
+  --bg-gray-300: #d5dbdb;
+  --bg-gray-400: #bfc9ca;
+  --bg-gray-500: #aab7b8;
+  --bg-gray-600: #95a5a6;
+  --bg-gray-700: #839192;
+  --bg-gray-800: #717d7e;
+  --bg-gray-900: #5f6a6a;
+
+  --bg-purple-100: #f5eef8;
+  --bg-purple-200: #ebdef0;
+  --bg-purple-300: #d7bde2;
+  --bg-purple-400: #c39bd3;
+  --bg-purple-500: #af7ac5;
+  --bg-purple-600: #9b59b6;
+  --bg-purple-700: #884ea0;
+  --bg-purple-800: #76448a;
+  --bg-purple-900: #633974;
+
+  --bg-teal-100: #e8f8f5;
+  --bg-teal-200: #d1f2eb;
+  --bg-teal-300: #a3e4d7;
+  --bg-teal-400: #76d7c4;
+  --bg-teal-500: #48c9b0;
+  --bg-teal-600: #1abc9c;
+  --bg-teal-700: #17a589;
+  --bg-teal-800: #148f77;
+  --bg-teal-900: #117a65;
+}

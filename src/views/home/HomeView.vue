@@ -7,12 +7,12 @@
                     <div class="flex-row d-flex" style="gap: var(--p-2)">
                         <div class="d-flex align-content-center">
                             <img class="icon" src="/github.svg" alt="github"/>
-                            <span>projects</span>
+                            <a href="https://github.com/TasyaKh">projects</a>
                         </div>
 
                         <div class="d-flex align-content-center">
                             <img class="icon" src="/telegram.svg" alt="telegram"/>
-                            <span>contact</span>
+                            <a href="https://t.me/tasyakhr">contact</a>
                         </div>
                     </div>
 
@@ -48,9 +48,7 @@ import AboutMe from "@/views/home/sections/AboutMe.vue";
 import MyProjects from "@/views/home/sections/MyProjects.vue";
 </script>
 
-
 <style lang="scss">
-
 
 .icon {
   width: 32px !important;
@@ -67,6 +65,7 @@ import MyProjects from "@/views/home/sections/MyProjects.vue";
 }
 
 .sticky {
+  z-index: 10;
   backdrop-filter: blur(8px);
   position: sticky;
   top: 0;

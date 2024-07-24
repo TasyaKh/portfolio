@@ -9,10 +9,35 @@ body {
   background: linear-gradient(90deg, rgba(22,17,55,1) 0%, rgba(56,30,80,1) 100%);
   color: var(--text-color-1);
   font-weight: 300;
+
+  ::selection{
+    background: var(--bg-selection-color);
+    color: var(--text-color-hover);
+  }
+
+  ::-moz-selection{
+    background: var(--main-color-hover);
+  }
+
 }
+
+a{
+  color:  var(--link-color);
+  cursor: pointer;
+
+  &:hover{
+    color: var(--text-color-hover);
+    transition: 0.3s;
+  }
+  &:visited{
+    color: var(--text-color-hover);
+  }
+}
+
 
 h1,h2,h3,h4,h5,h6{
   padding: var(--p-2) 0;
+  margin: var(--m-2) auto;
   font-weight: bold;
   //margin: 0;
   text-transform: uppercase;
@@ -20,7 +45,7 @@ h1,h2,h3,h4,h5,h6{
 
 hr.thin {
   border: 0;
-  height: 0.5px;
+  height: 1px;
   opacity: 0.5;
   background-image: -webkit-linear-gradient(left, var(--text-color-1) 10%, rgba(0,0,0,0) 60%);
 }

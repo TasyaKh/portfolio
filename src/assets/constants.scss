@@ -1,34 +1,10 @@
 :root {
-  //////////////////////////////////////////////////
-  // colors
-  //////////////////////////////////////////////////
-
-  --main-color: #e3255e;
-  --main-color-hover: #de234b;
-  --main-border-card: 1px solid #d9d9d9;
-  --main-navigation-color: #485485;
-  --border-color: rgb(61 61 61 / 20%);
-
-  // --second-color
-  --second-color: #7d97dc;
-  --second-color-50: rgb(103 134 218 / 50%);
-  --second-accept: #5f7ccb;
-
-  // colors for any cases
-  --green-color: #b1d789;
-  --red-color: #d79b89;
-  --dusk-color: #5e72a5;
-
-  //elems colors
-  --body-color: rgb(22,17,55);
-  --text-color-1: rgb(194, 201, 255);
 
   //////////////////////////////////////////////////
   // shadow
   //////////////////////////////////////////////////
 
   --box-shadow: 0 0 5px 1px rgb(221 221 221);
-  --hover-elem: 0 0 0.1rem 0.15rem #6786da;
 
   //////////////////////////////////////////////////
   // fonts
@@ -54,4 +30,11 @@
   --p-1: 0.25rem;
   --p-2: 0.5rem;
   --p-3: 1rem;
+
+  //margin
+  --m-1: 0.25rem;
+  --m-2: 0.5rem;
+  --m-3: 1.5rem;
+  --m-4: 2rem;
+  --m-5: 2.5rem;
 }
