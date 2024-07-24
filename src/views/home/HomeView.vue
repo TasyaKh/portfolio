@@ -1,18 +1,21 @@
 <template>
     <div class="container">
+        <!--  up -->
         <section class="mt-5">
             <div class="row my-2 g-2 justify-content-center">
                 <div class="col">
-                    <div class="mb-2 ">Find me</div>
+                    <div class="mb-2 ">Find me here</div>
                     <div class="flex-row d-flex" style="gap: var(--p-2)">
                         <div class="d-flex align-content-center">
-                            <img class="icon" src="/github.svg" alt="github"/>
-                            <a href="https://github.com/TasyaKh">projects</a>
+                            <a href="https://github.com/TasyaKh">
+                                <img class="icon" src="/github.svg" alt="github"/>
+                                projects</a>
                         </div>
 
                         <div class="d-flex align-content-center">
-                            <img class="icon" src="/telegram.svg" alt="telegram"/>
-                            <a href="https://t.me/tasyakhr">contact</a>
+                            <a href="https://t.me/tasyakhr">
+                                <img class="icon" src="/telegram.svg" alt="telegram"/>
+                                contact</a>
                         </div>
                     </div>
 

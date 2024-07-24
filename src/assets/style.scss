@@ -24,6 +24,8 @@ body {
 a{
   color:  var(--link-color);
   cursor: pointer;
+  display: flex;
+  align-items: center;
 
   &:hover{
     color: var(--text-color-hover);

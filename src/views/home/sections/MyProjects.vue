@@ -1,14 +1,16 @@
 <template>
-<!--    <div class="" style="display: grid; grid-template-columns: 1fr 1fr">-->
-<!--        <div>dddeded</div>-->
-<!--        <div style="display: flex; justify-content: end">eeeee</div>-->
-<!--    </div>-->
+    <!--    <div class="" style="display: grid; grid-template-columns: 1fr 1fr">-->
+    <!--        <div>dddeded</div>-->
+    <!--        <div style="display: flex; justify-content: end">eeeee</div>-->
+    <!--    </div>-->
     <div class="row g-3">
-        <div class="col-md-6 col-12" v-for="proj in projects">
+        <div class="col-md-6 col-12 " v-for="proj in projects">
 
             <div class="card">
                 <div class="card-project">
-                    <img class="" :src="proj.src" :alt="proj.name"/>
+                    <div class="img-wrapper">
+                        <img class="" :src="proj.src" :alt="proj.name"/>
+                    </div>
                     <div class="description">
                         <div class="description-content">
                             <h3>{{ proj.name }}</h3>
@@ -67,12 +69,18 @@ const projects: Project[] = [
         technologies: [Technology.TYPESCRIPT, Technology.MYSQL, Technology.EXPRESSJS, Technology.REACT]
     },
     {
-        name: "Baikal Hut", src: "/projects/baikal-hut.png", description: `Order a house on the lake`,
+        name: "Baikal Hut", src: "/projects/baikal-hut.png", description: `Order a house near the lake`,
         technologies: [Technology.TYPESCRIPT, Technology.NEXTJS]
     },
     {
+        name: "Yandex/Topvisor", src: "/projects/yandex-topvisor.png",
+        description: `Web-application which can interact with Topvisor and Yandex.Metric
+        services and represent data in diagrams from them`,
+        technologies: [Technology.TYPESCRIPT, Technology.VUE, Technology.NESTJS]
+    },
+    {
         name: "Barcode Scanner", src: "/projects/barcode.png", description: `
-        Scan Barcode and save information about product in android applications
+        Scan Barcode and save information about product in android application
         `,
         technologies: [Technology.ANDROID, Technology.REACT_NATIVE]
     },
@@ -82,13 +90,6 @@ const projects: Project[] = [
         `,
         technologies: [Technology.ANDROID, Technology.KOTLIN]
     },
-    {
-        name: "Yandex/Topvisor", src: "/projects/yandex-topvisor.png",
-        description: `Web-application which can interact with Topvisor and Yandex.Metric
-        services and represent data in diagrams from them`,
-        technologies: [Technology.TYPESCRIPT, Technology.VUE, Technology.NESTJS]
-    },
-
 
 ]
 </script>
@@ -97,7 +98,10 @@ const projects: Project[] = [
 <style lang="scss" scoped>
 
 .technologies {
-  border-radius:  0 0 var(--border-radius) 50px;
+  display: flex;
+  justify-content: center;
+  //border-radius:  0 0 var(--border-radius) 50px;
+
   //display: grid;
   //grid-template-columns: repeat(3, 1fr);
   //grid-auto-rows: minmax(100px, auto);
@@ -105,11 +109,23 @@ const projects: Project[] = [
 
 .card-project {
   position: relative;
-  border-radius: var(--border-radius) 50px 0 0;
+  //border-radius: var(--border-radius) 50px 0 0;
   overflow: hidden;
   width: 100%;
-  height: 20rem;
+  max-height: 20rem;
+  display: flex;
+  justify-content: center;
+  //height: 20rem;
   cursor: url("/paw.ico"), pointer;
+
+
+  .img-wrapper {
+    //border-radius: var(--border-radius);
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+    max-height: 20rem;
+  }
 
   &:hover {
     & .description {
@@ -123,10 +139,11 @@ const projects: Project[] = [
   }
 
   img {
-    filter: brightness(70%);
+    filter: brightness(80%);
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    max-height: 20rem;
+    object-fit: contain;
   }
 
   .description {
@@ -156,57 +173,68 @@ const projects: Project[] = [
 .crumb {
   padding: 1px var(--p-3);
   border-radius: 50px;
-  border: 1px solid var(--border-color);
+  //border: 1px solid var(--border-color);
   font-weight: 500;
+  background: linear-gradient(90deg, var(--text-color-1) 1%, rgba(0, 0, 0, 0) 70%);
 
   &.typescript {
-    color: var(--bg-blue-500);
-    border-color: var(--bg-blue-500);
+    color: var(--bg-blue-400);
+    background: var(--bg-blue-900);
+    background: linear-gradient(90deg, var(--bg-blue-900) 1%, rgba(0, 0, 0, 0) 70%);
   }
 
   &.mysql {
-    color: var(--bg-blue-700);
-    border-color: var(--bg-blue-700);
+    color: var(--bg-blue-600);
+    background: var(--bg-blue-900);
+    background: linear-gradient(90deg, var(--bg-blue-900) 1%, rgba(0, 0, 0, 0) 70%);
   }
 
   &.postgresql {
-    color: var(--bg-blue-600);
-    border-color: var(--bg-blue-600);
+    color: var(--bg-blue-700);
+    background: var(--bg-blue-900);
+    background: linear-gradient(90deg, var(--bg-blue-900) 1%, rgba(0, 0, 0, 0) 70%);
   }
 
   &.expressjs {
-    color: var(--bg-gray-800);
-    border-color: var(--bg-gray-800);
+    color: var(--bg-gray-500);
+    background: var(--bg-gray-900);
+    background: linear-gradient(90deg, var(--bg-gray-900) 1%, rgba(0, 0, 0, 0) 70%);
   }
 
   &.react, &.react-native {
-    color: var(--bg-blue-400);
-    border-color: var(--bg-blue-400);
+    color: var(--bg-blue-500);
+    background: var(--bg-blue-600);
+    background: linear-gradient(90deg, var(--bg-blue-600) 1%, rgba(0, 0, 0, 0) 70%);
   }
 
   &.vue {
-    color: var(--bg-teal-400);
-    border-color: var(--bg-teal-400);
+    color: var(--bg-teal-300);
+    background: var(--bg-teal-700);
+    background: linear-gradient(90deg, var(--bg-teal-700) 1%, rgba(0, 0, 0, 0) 70%);
   }
 
   &.angular {
-    color: var(--bg-purple-700);
-    border-color: var(--bg-purple-700);
+    color: var(--bg-purple-600);
+    background: var(--bg-purple-900);
+    background: linear-gradient(90deg, var(--bg-purple-900) 1%, rgba(0, 0, 0, 0) 70%);
   }
 
   &.nestjs {
-    color: var(--bg-red-700);
-    border-color: var(--bg-red-700);
+    color: var(--bg-red-500);
+    border-color: var(--bg-red-900);
+    background: linear-gradient(90deg, var(--bg-red-900) 1%, rgba(0, 0, 0, 0) 70%);
   }
 
   &.android {
     color: var(--bg-green-400);
-    border-color: var(--bg-green-400);
+    border-color: var(--bg-green-800);
+    background: linear-gradient(90deg, var(--bg-green-800) 1%, rgba(0, 0, 0, 0) 70%);
   }
 
   &.kotlin {
     color: var(--bg-purple-500);
-    border-color: var(--bg-purple-500);
+    border-color: var(--bg-purple-800);
+    background: linear-gradient(90deg, var(--bg-purple-800) 1%, rgba(0, 0, 0, 0) 70%);
   }
 
 }
